@@ -6,7 +6,7 @@ function Hero() {
             <div className="hero__container container">
                 <div className="hero__text">
                     <h2 className="hero__title">
-                        Endless entertainment and knoledge
+                        Endless entertainment and knoledgee
                     </h2>
 
                     <div className="hero__subtitle">
