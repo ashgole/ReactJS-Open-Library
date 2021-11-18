@@ -1,21 +1,22 @@
-import Backdrop from "./components/backdrop/Backdrop";
-import FooterPrimary from "./components/footerPrimary/FooterPrimary";
-import FooterSecondary from "./components/footerSecondary/FooterSecondary";
-import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
-import { SidebarVisibilityContextProvider } from "./store/SidebarVisibilityContext";
+import Backdrop from "./components/backdrop/backdrop";
+import FooterPrimary from "./components/footerPrimary/footerPrimary";
+import FooterSecondary from "./components/footerSecondary/footerSecondary";
+import Header from "./components/header/header";
+import Sidebar from "./components/sidebar/sidebar";
+import Home from "./pages/home";
+import { SidebarVisibilityContextProvider } from "./store/sidebarVisibilityContext";
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Home from "./pages/home";
 import Detail from "./pages/detail";
 import List from "./pages/list";
 import Create from "./pages/create";
+import UserContextProvider from "./store/userContext";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
-import UserContextProvider from "./store/userContext";
+
 
 function App() {
   return (
@@ -29,7 +30,6 @@ function App() {
         </SidebarVisibilityContextProvider>
         <Switch>
           <Route path="/" exact component={ Home } />
-          <Route path="/book" exact component={ Detail } />
           <Route path="/book/:id" exact component={ Detail } />
           <Route path="/list" component={ List } />
           <Route path="/create" component={ Create } />

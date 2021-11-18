@@ -1,4 +1,4 @@
-import FeaturedBox from "../featuredBox/FeaturedBox";
+import FeaturedBox from "../featuredBox/featuredBox";
 
 function FeaturedBoxList() {
   return (

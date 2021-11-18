@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import SidebarVisibilityContext from "../../store/SidebarVisibilityContext";
+import SidebarVisibilityContext from "../../store/sidebarVisibilityContext";
 
 
 function Backdrop() {

@@ -1,4 +1,4 @@
-import BestBookGridItem from "../bestBookGridItem/BestBookGridItem";
+import BestBookGridItem from "../bestBookGridItem/bestBookGridItem";
 
 function BestBooksGrid() {
   return (

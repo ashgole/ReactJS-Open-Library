@@ -1,8 +1,8 @@
-import BestBooksGrid from "../components/bestBooksGrid/BestBooksGrid";
-import FeaturedBoxList from "../components/featuredBoxList/FeaturedBoxList";
-import FeaturedDataList from "../components/featuredDataList/FeaturedDataList";
-import FeaturedTestimonial from "../components/featuredTestimonial/FeaturedTestimonial";
-import Hero from "../components/hero/Hero";
+import BestBooksGrid from "../components/bestBooksGrid/bestBooksGrid";
+import FeaturedBoxList from "../components/featuredBoxList/featuredBoxList";
+import FeaturedDataList from "../components/featuredDataList/featuredDataList";
+import FeaturedTestimonial from "../components/featuredTestimonial/featuredTestimonial";
+import Hero from "../components/hero/hero";
 function Home() {
 
   const heroData = {

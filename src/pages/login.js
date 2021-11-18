@@ -8,10 +8,10 @@ export default function Login(props) {
   const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
-    if (user) {
-      props.history.push('/');
+    if (user && props.location.state.prevPath) {
+      props.history.push(props.location.state.prevPath);
     }
-  }, [user, props.history])
+  }, [user, props.history, props.location])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,10 +27,10 @@ export default function Login(props) {
           password: password
         })
       })
-  
+
       const data = await response.json();
       console.log('data', data);
-  
+
       if (data.error) {
         setError(data.message[0].messages[0].message);
         return;
@@ -46,11 +46,9 @@ export default function Login(props) {
     <div>
 
       <h1>Login</h1>
-      
+
       {error && <p className="msg msg--error">{error.toString()}</p>}
-      <br />
-      USER: <span>{JSON.stringify(user)}</span>
-      
+
       <form onSubmit={handleSubmit}>
         <input type="email" value={email} onChange={(e) => { setError(''); setEmail(e.target.value)}} />
         <input type="password" value={password} onChange={(e) => { setError(''); setPassword(e.target.value)}} />

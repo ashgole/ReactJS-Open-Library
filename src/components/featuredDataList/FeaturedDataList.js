@@ -1,4 +1,4 @@
-import FeaturedDataItem from "../featuredDataItem/FeaturedDataItem";
+import FeaturedDataItem from "../featuredDataItem/featuredDataItem";
 
 function FeaturedDataList() {
   return (

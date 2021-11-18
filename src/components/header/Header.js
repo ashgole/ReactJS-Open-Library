@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
-import SidebarVisibilityContext from "../../store/SidebarVisibilityContext";
-import Button from "../button/Button";
+import { Link, useLocation } from "react-router-dom";
+import SidebarVisibilityContext from "../../store/sidebarVisibilityContext";
 import { UserContext } from "../../store/userContext";
-
+import Button from "../button/button";
 
 function Header() {
   const [,, toggleSidebarVisibility] = useContext(SidebarVisibilityContext);
@@ -12,6 +11,8 @@ function Header() {
   const logoutHandler = () => {
     setUser(null);
   }
+
+  const location = useLocation();
 
   return (
     <>
@@ -31,7 +32,8 @@ function Header() {
           <div className='site-header__user-info'>
             {!user &&
               <>
-                <Link to="/login" className="btn btn--hollow site-header__signin">Log In</Link>
+              {/* FIXME what is state  */}
+                <Link to={{pathname: '/login', state: { prevPath: location.pathname }}}   className="btn btn--hollow site-header__signin">Log In</Link>
                 <Link to="/signup" className="btn btn--hollow site-header__signin">Sign Up</Link>
               </>
             }

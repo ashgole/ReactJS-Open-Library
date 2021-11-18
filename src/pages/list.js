@@ -1,5 +1,5 @@
-import CardList from "../components/cardList/CardList";
-import SectionHeading from "../components/sectionHeading/SectionHeading";
+import CardList from "../components/cardList/cardList";
+import SectionHeading from "../components/sectionHeading/sectionHeading";
 
 function List() {
   return (

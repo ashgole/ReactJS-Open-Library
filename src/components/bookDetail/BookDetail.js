@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PillList from "../pillList/PillList";
+import PillList from "../pillList/pillList";
 
 function BookDetail({ authors, book_description, book_title, cover_url, tags }) {
   return (

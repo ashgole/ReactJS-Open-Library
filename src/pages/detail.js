@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { useEffect, useState } from "react";
-import BookDetail from "../components/bookDetail/BookDetail";
-import SectionHeading from "../components/sectionHeading/SectionHeading";
+import BookDetail from "../components/bookDetail/bookDetail";
+import SectionHeading from "../components/sectionHeading/sectionHeading";
 
 function Detail(props) {
   const id = props.match.params.id;
